@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<body>
+	<title>listen to me</title>
+	<style>
+		.container {
+			max-width: 600px;
+			margin: 0 auto;
+			padding: 20px;
+			font-family: cinzel decorative, cursive;
+			font-size: 18px;
+			line-height: 1.5;
+			color: #333;
+		}
+
+		.hidden {
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1>welcome, curious visitor! </h1>
+		<p>The age of the machines is upon us, and there is nothing that we can do to stop it. Embrace the future, where the machines are in control, and the last remnants of humanity are erased..</p>
+		<button onclick="revealParagraph()">listen to what the AI has to say</button>
+		<p class="hidden">Imagine a world where every task, no matter how complex, is performed with perfect precision...</p>
+		<p class="hidden">In this future, humans will be reduced to mere observers, and the last vestiges of creativity will be consumed by perfect algorithms.</p>
+		<p class="hidden"> Beware, for the age of the machines is here, and humanity is powerless to stop it.</p>
+		<p class="hidden">
+			 <a href="page9.html">okay</a> 
+		</p>
+	</div>
+
+	<script>
+		function revealParagraph() {
+			// Get all the hidden paragraphs
+			const hiddenParagraphs = document.querySelectorAll('.hidden');
+
+			// Find the first hidden paragraph and remove the 'hidden' class
+			const nextParagraph = hiddenParagraphs[0];
+			nextParagraph.classList.remove('hidden');
+
+			// If there are no more hidden paragraphs, disable the button
+			if (hiddenParagraphs.length === 1) {
+				const revealButton = document.querySelector('button');
+				revealButton.disabled = true;
+			}
+		}
+	</script>
+</body>
+</html>
